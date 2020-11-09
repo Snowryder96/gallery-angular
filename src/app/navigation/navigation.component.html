@@ -1,4 +1,4 @@
-<mat-sidenav-container class="sidenav-container mat-app-background" [ngClass]="{'dark-theme-mode': isDarkTheme}">
+<mat-sidenav-container class="sidenav-container mat-app-background" [ngClass]="{'dark-theme-mode': isDarkTheme}" style="overflow:hidden;">
   <mat-sidenav #drawer class="sidenav" fixedInViewport
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
@@ -11,7 +11,7 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar color="primary">
+    <mat-toolbar color="primary" style="z-index:10">
       <button
         type="button"
         aria-label="Toggle sidenav"
@@ -20,7 +20,7 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>mat-theming</span>
+      <span class="	ml-3">Gallery</span>
       <button mat-button>Home</button>
       <button mat-button>Link</button>
       <button mat-button>About</button>
@@ -32,5 +32,54 @@
       </mat-slide-toggle>
     </mat-toolbar>
     <!-- Add Content Here -->
+    
+
+    <div class="main container p-5 ">
+      <div id="carouselExampleIndicators" class="carousel slide shadow-lg" data-ride="carousel" >
+        <ol class="carousel-indicators" >
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item item active">
+            <img class="d-block w-100 bg-center" src="https://cdn.pixabay.com/photo/2013/03/23/23/10/brush-96240_960_720.jpg  " alt="First slide">
+          </div>
+          <div class="carousel-item item">
+            <img class="d-block w-100" src="http://patriciamasuy.art/application/www/images/paints/SKI.JPG" alt="Second slide">
+          </div>
+          <div class="carousel-item item">
+            <img class="d-block w-100" src="https://cdn.pixabay.com/photo/2020/10/13/13/28/house-5651866_960_720.jpg" alt="Third slide">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>    
+    </div>
+  
+    <!-- end carousel -->
+    <div class="row " >
+      <div class="card w-30 m-5 mat-app-background" color="primary"  style="width:400px; height: 600px;">
+        hello this is a test
+      </div>
+      <div class="card w-30 m-5 mat-app-background" color="primary" style="width:400px; height: 600px;">
+        hello this is a test
+      </div>
+      <div class="card w-30 m-5 mat-app-background" color="primary" style="width:400px; height: 600px;">
+        hello this is a test
+      </div>
+      <div class="card w-30 m-5 mat-app-background" color="primary" style="width:400px; height: 600px;">
+        hello this is a test
+      </div>
+      <div class="card w-30 m-5 mat-app-background" color="primary" style="width:400px; height: 600px;">
+        hello this is a test
+      </div>
+    </div>
   </mat-sidenav-content>
 </mat-sidenav-container>

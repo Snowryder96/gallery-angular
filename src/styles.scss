@@ -54,3 +54,21 @@ $gallery-angular-theme-dark: mat-dark-theme((
 .dark-theme-mode{
   @include angular-material-theme($gallery-angular-theme-dark);
 }
+
+
+/* Works on Chrome/Edge/Safari */
+*::-webkit-scrollbar {
+  width: 7px;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: grey;
+  border-radius: 20px;
+}
+button:focus,button:active {
+  outline: none !important;
+  box-shadow: none;
+}
+

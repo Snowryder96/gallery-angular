@@ -13,11 +13,17 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard.component';
+import { AdminPaintingsComponent } from './admin/admin-paintings/admin-paintings.component';
+import { SignInComponent } from './authentication/sign-in/sign-in.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavigationComponent
+    NavigationComponent,
+    AdminDashboardComponent,
+    AdminPaintingsComponent,
+    SignInComponent
   ],
   imports: [
     BrowserModule,
